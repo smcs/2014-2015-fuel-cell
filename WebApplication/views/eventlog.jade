@@ -1,0 +1,49 @@
+extends layout
+
+block styles
+    // add style files
+
+block headscripts
+    // add scripts that load in head
+
+block scripts
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/eventlog.js")
+
+block content
+ h1= title
+ div#container
+
+ style.
+    .customers
+    {
+    font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+    width:100%;
+    border-collapse:collapse;
+    }
+    .header
+    {
+    font-size:1.1em;
+    text-align:left;
+    padding-top:5px;
+    padding-bottom:4px;
+    background-color:red;
+    color:#ffffff;
+    }
+    .row
+    {
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+    }
+    .rowalt
+    {
+    font-size:1em;
+    border:1px solid #98bf21;
+    padding:3px 7px 2px 7px;
+    color:#000000;
+    background-color:#EAF2D3;
+    }
+
+block scripts
+    // scripts that load after content above
