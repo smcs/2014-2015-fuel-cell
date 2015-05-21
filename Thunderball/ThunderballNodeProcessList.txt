@@ -1,0 +1,18 @@
+
+# Basic Thunderball Launch file
+
+# Main Application which runs fuel cell
+# ARGS:
+/home/ubuntu/src/Linux/Applications/Thunderball/BBB/Debug/Thunderball --path /home/ubuntu/src/Linux/Applications/Thunderball --id 4 --logfile /opt/protonex/log/PtxDbgMain.log --env /opt/protonex/appuserenv --pru-app /home/ubuntu/src/Linux/PRUComps/PwmPruMain.bin --paramfile /opt/protonex/Parameter.data
+
+# Display and button handler
+# ARGS:
+# --pru-app /home/ubuntu/src/Linux/PRUComps/SpiPruMain.bin 
+# --id 2 
+/home/ubuntu/src/Linux/Applications/ThunderballUI/BBB/Debug/ThunderballUI --pru-app /home/ubuntu/src/Linux/PRUComps/SpiPruMain.bin --id 5 --path /home/ubuntu/src/Linux/Applications/Thunderball --env /opt/protonex/appuserenv --remoteui --dataif
+
+# node.js Web server
+# ARGS: app.js
+/usr/local/bin/node /home/ubuntu/src/Linux/Applications/ThunderballUI/WebApplication/app.js
+
+#Done

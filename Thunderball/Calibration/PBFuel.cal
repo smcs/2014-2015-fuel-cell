@@ -1,0 +1,25 @@
+# Anode Fuel calibration file
+# Date made: 9-4-14
+# Not real data - copied from unit #1 cal
+# Ref   Value - must use spaces in between values
+3263 2000
+3237 1900
+3205 1800
+3170 1700
+3128 1600
+3104 1500
+3071 1400
+3013 1300
+2948 1200
+2879 1100
+2805 1000
+2702 900
+2609 800
+2476 700
+2330 600
+2148 500
+1930 400
+1659 300
+1336 200
+949 100
+666 0

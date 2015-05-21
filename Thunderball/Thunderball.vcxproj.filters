@@ -1,0 +1,719 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Linux">
+      <UniqueIdentifier>{3c21cf02-1047-4db8-860b-087cf78337c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AppComps">
+      <UniqueIdentifier>{d0ae22a8-9517-4f43-b07f-395863720e1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControlComps">
+      <UniqueIdentifier>{7d8c1f5b-62da-471b-a495-2d3be728795e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GenComps">
+      <UniqueIdentifier>{bfe8aac3-611a-4651-8965-ead6027984bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HwComponents">
+      <UniqueIdentifier>{75e4a2d1-1e66-47d7-9615-fba14c443c09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HwConfigurations">
+      <UniqueIdentifier>{15046509-e0bb-4fbc-b5e7-79203ef26735}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="HwDrivers">
+      <UniqueIdentifier>{a2f29ccc-2bf2-40a4-bc9e-5656066e8991}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SysComps">
+      <UniqueIdentifier>{743d4cd9-b33d-424f-85f9-c48e48c5e9f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpecComps">
+      <UniqueIdentifier>{86cad3db-c368-4cd2-8056-31663deb4777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SpecComps\Thunderball">
+      <UniqueIdentifier>{fdcb2b54-c75f-481e-a72d-5340c3bc6694}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MemSystem">
+      <UniqueIdentifier>{f42221e4-8486-42f5-932a-069be3ebb360}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\Applications">
+      <UniqueIdentifier>{85ed75da-d080-4d90-ad25-a8a6284d9eea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\NetComps">
+      <UniqueIdentifier>{7a12a955-604a-4cce-bbe9-96063be8a2bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\PlatformComps">
+      <UniqueIdentifier>{4f79f10b-c00d-4f26-9a5e-278ac5afc813}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\Applications\Thunderball">
+      <UniqueIdentifier>{b6427e86-d2c5-4fc0-a6fe-73bb2ecdc541}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\Applications\Thunderball\Calibration">
+      <UniqueIdentifier>{b8d84541-77ce-4bcc-b23b-918a893489fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\InstallUtilities">
+      <UniqueIdentifier>{10e1a9ef-d43f-4be4-9fb4-ed76d09986d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SysComps\SystemConfigurations">
+      <UniqueIdentifier>{10d2ef30-c801-4771-8bfd-805e2ce11172}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\Applications\Thunderball\Build">
+      <UniqueIdentifier>{f70e8969-0cda-4902-9eb3-c39131186dac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\PRUComps">
+      <UniqueIdentifier>{7189f2fe-b72a-49cd-9e4a-cf1d895aaa07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\Applications\Thunderball\overlays">
+      <UniqueIdentifier>{298dffb6-e88f-4691-8878-e535496aecad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Linux\DeviceComps">
+      <UniqueIdentifier>{e31635a0-1d02-444b-96aa-0c34069c391a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile.BBB" />
+    <None Include="Calibration\AnodeAir.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\AnodeFuel.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\CathodeAir.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\PBAir.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\PBFuel.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\Thermocouple.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="restartTB.sh">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\checkforupgrade.sh">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\UpStartInitScript.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="ProtonexMain.sh">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </None>
+    <None Include="ProtonexSub1.sh">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\UpStartInitSubScript.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\smb.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="..\makedirs.sh">
+      <Filter>Linux\Applications</Filter>
+    </None>
+    <None Include="..\..\..\LinuxMake.sh" />
+    <None Include="Build\makePackage.sh">
+      <Filter>Linux\Applications\Thunderball\Build</Filter>
+    </None>
+    <None Include="Build\sampledevenv">
+      <Filter>Linux\Applications\Thunderball\Build</Filter>
+    </None>
+    <None Include="Build\setupDevice.sh">
+      <Filter>Linux\Applications\Thunderball\Build</Filter>
+    </None>
+    <None Include="..\..\..\LinuxBuildIt.sh" />
+    <None Include="..\..\PRUComps\PwmPruMain.hp">
+      <Filter>Linux\PRUComps</Filter>
+    </None>
+    <None Include="..\..\PRUComps\PwmPruMain.p">
+      <Filter>Linux\PRUComps</Filter>
+    </None>
+    <None Include="overlays\BB-BONE-PRU-PINS-00A3.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\BB-BONE-PWM-PINS-00A0.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\BB-GPIOMAP-00A0.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\BB-SPI0-00A0.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\BB-SPI1-00A0.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\enable-uart5.dts">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="overlays\makedtc.sh">
+      <Filter>Linux\Applications\Thunderball\overlays</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\selfextract.sh">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\UpStartNodeScript.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="..\..\..\setupBBB.sh" />
+    <None Include="Build\setuphardware.sh">
+      <Filter>Linux\Applications\Thunderball\Build</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\UpStartMainScript.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="Calibration\AmbientThermistor.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="Calibration\RemoteThermistor.cal">
+      <Filter>Linux\Applications\Thunderball\Calibration</Filter>
+    </None>
+    <None Include="..\..\InstallUtilities\UpStartEth0Script.conf">
+      <Filter>Linux\InstallUtilities</Filter>
+    </None>
+    <None Include="restartTBNode.sh">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\AppComps\AppEnums.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\AppMainSetup.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\ButtonManager.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\ConfigObject.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\DebugMemoryMgr.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\FileIfc.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\ObjectMgr.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\ObjectStore.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\Poller.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\SysStats.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\AppComps\TftpDataMgr.cpp">
+      <Filter>AppComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\AdcActivatedBaseControl.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\AdcBankMgr.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\AdcBankMgrImpl.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\ADCMgrUtils.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\AdcMonitor.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BaseControl.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BaseElement.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BaseMachine.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BaseMonitor.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BasePoller.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\BasePwm.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\DigitalMonitor.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\SegmentedLookupTable.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\TableActivatedBaseControl.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\TableCalMon.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\TempMon.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\ThresholdChecker.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\DataFeedbackReplicator.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\PulseMachineWithEnable.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\SimpleMachine.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GenComps\ExtraData.cpp">
+      <Filter>GenComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GenComps\StrUtils.cpp">
+      <Filter>GenComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\GenComps\VT100Utils.cpp">
+      <Filter>GenComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\HwComponents\AD7888_12BitAdcDevice.cpp">
+      <Filter>HwComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\HwComponents\RawDevices.cpp">
+      <Filter>HwComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\HwComponents\GenericDACDevice.cpp">
+      <Filter>HwComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\HwComponents\LTC2634_12BitDacDevice.cpp">
+      <Filter>HwComponents</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SystemConfigurations\ExtCommConfig.cpp">
+      <Filter>SysComps\SystemConfigurations</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\AtomicLock.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\BaseObject.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\BufferQueue.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\Debug.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\EventMgr.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\FcAssert.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\Heap.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\OutStreamInterface.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\SysEnums.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\TimerMgr.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\LinkedAirControl.cpp">
+      <Filter>SpecComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballDcDc.cpp">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSofcMgr.cpp">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\MemSystem\CalClkDevice.cpp">
+      <Filter>MemSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\MemSystem\DS1390CalClkDevice.cpp">
+      <Filter>MemSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\MemSystem\MemoryDevice.cpp">
+      <Filter>MemSystem</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpDataInterface.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpSerialInterface.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\UdpDataInterface.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\ArgParser.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\GPIOConst.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\GPIOManager.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxBufferQueue.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxDebug.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\TextFile.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\cPWM.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballConfigControls.cpp">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballConfigAdc.cpp">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballHwConfig.cpp">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballPlatformConfig.cpp">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\PtxMsgHandler.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpPtxMsgInterface.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.cpp">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\CalClkMgr.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpDebugInterface.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxProcess.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballProcess.cpp">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxDataInterface.cpp">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PRUComps\PruPwmInterface.cpp">
+      <Filter>Linux\PRUComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSimulation.cpp">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControlComps\LinearCalMon.cpp">
+      <Filter>ControlComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SysComps\HelpSystem.cpp">
+      <Filter>SysComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSensorControl.cpp">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpMsgClientData.cpp">
+      <Filter>Linux\NetComps</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\AppComps\AppEnums.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\AppMainSetup.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\ButtonManager.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\ConfigObject.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\DebugMemoryMgr.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\FileIfc.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\ObjectList.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\ObjectMgr.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\ObjectStore.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\Poller.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\SysStats.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\TftpDataMgr.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\AdcActivatedBaseControl.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\AdcBankMgr.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\AdcBankMgrImpl.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\ADCMgrUtils.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\AdcMonitor.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BaseControl.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BaseElement.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BaseMachine.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BaseMonitor.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BasePoller.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\BasePwm.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\DigitalMonitor.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\SegmentedLookupTable.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\TableActivatedBaseControl.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\TableCalMon.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\TempMon.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\ThresholdChecker.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\DataFeedbackReplicator.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\Device.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\HwDriveMode.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\PulseMachineWithEnable.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\SimpleMachine.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GenComps\ExtraData.h">
+      <Filter>GenComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GenComps\StrUtils.h">
+      <Filter>GenComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GenComps\Types.h">
+      <Filter>GenComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GenComps\VT100Utils.h">
+      <Filter>GenComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwComponents\AD7888_12BitAdcDevice.h">
+      <Filter>HwComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwComponents\RawDevices.h">
+      <Filter>HwComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwComponents\GenericDACDevice.h">
+      <Filter>HwComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwComponents\LTC2634_12BitDacDevice.h">
+      <Filter>HwComponents</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwConfigurations\HwConfig.h">
+      <Filter>HwConfigurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\HwDrivers\CommunicationInterface.h">
+      <Filter>HwDrivers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SystemConfigurations\ExtCommConfig.h">
+      <Filter>SysComps\SystemConfigurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SystemConfigurations\PlatformConfig.h">
+      <Filter>SysComps\SystemConfigurations</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\AtomicLock.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\BaseObject.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\BufferQueue.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\Debug.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\EventMgr.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\FcAssert.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\Heap.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\OutStreamInterface.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\SysEnums.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\TimerMgr.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\LinkedAirControl.h">
+      <Filter>SpecComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\ProductStorageMgr.h">
+      <Filter>SpecComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\StorageMgr.h">
+      <Filter>SpecComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballDcDc.h">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSofcMgr.h">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MemSystem\CalClkDevice.h">
+      <Filter>MemSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MemSystem\DS1390CalClkDevice.h">
+      <Filter>MemSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\MemSystem\MemoryDevice.h">
+      <Filter>MemSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpDataInterface.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpSerialInterface.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\UdpDataInterface.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\ArgParser.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\GPIOConst.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\GPIOManager.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxBufferQueue.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxDebug.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\TextFile.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\cPWM.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballConfigControls.h">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballConfigAdc.h">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\PtxMsgHandler.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpPtxMsgInterface.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.h">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\AppComps\SysState.h">
+      <Filter>AppComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\State.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\CalClkMgr.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpDebugInterface.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxProcess.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxDataInterface.h">
+      <Filter>Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PRUComps\PruPwmInterface.h">
+      <Filter>Linux\PRUComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSimulation.h">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\LinearCalMon.h">
+      <Filter>ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\HelpSystem.h">
+      <Filter>SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSensorControl.h">
+      <Filter>SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpMsgClientData.h">
+      <Filter>Linux\NetComps</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ThunderballProcessList.txt">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </Text>
+    <Text Include="InstalledProcessList.txt">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </Text>
+    <Text Include="TempOnlySim.txt">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </Text>
+    <Text Include="ThunderballNodeProcessList.txt">
+      <Filter>Linux\Applications\Thunderball</Filter>
+    </Text>
+  </ItemGroup>
+</Project>

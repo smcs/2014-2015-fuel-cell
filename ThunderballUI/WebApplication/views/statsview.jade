@@ -1,0 +1,42 @@
+extends layout
+
+block scripts
+  script(src="/javascripts/jquery.min.js")
+  script(src="/javascripts/highcharts.js")
+  script(src="/socket.io/socket.io.js")
+  script(src="/javascripts/statsview.js")
+
+block content
+  h1= title
+  div(id="chart" style="min-width: 400px; height: 500px; margin: 0 auto")
+  
+  style.
+    .context-menu 
+    {
+    visibility:hidden; /* No, you cannot use display:none; */
+    position:absolute;
+    border:1px solid #666;
+    margin:0;
+    padding:3px;
+    list-style:none;
+    width:150px;
+    background-color:#eee;
+    } 
+    .context-menu li:hover, .context-menu .context-menu-item-active 
+    {
+    background-color:#ccc;
+    }
+    .disabled 
+    {
+    color:#666;
+    background-color:#eee !important;
+    }
+    .title
+    {
+    color:#000;
+    background-color:#eee !important;
+    }
+    a
+    {
+    text-decoration:none;
+    }

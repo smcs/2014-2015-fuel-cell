@@ -1,0 +1,164 @@
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    /* identification */
+    part-number = "BB-GPIOMAP";
+
+    /* version */
+    version = "00A0";
+
+    /* state the resources this cape uses */
+    exclusive-use =
+        /* the pin header uses */
+
+		// EVERYTHING below tested and available
+
+		// Input
+        "P8.7",		// power button
+        "P8.8",		// esc button
+        "P8.9",		// up button
+        "P8.10",	// down button
+        "P8.11",	// enter button
+        "P8.12",	// 12V OK Sense
+
+		// Output s
+        "P8.14",	// 120mm Fan#
+        "P8.15",	// Igniter Relay#
+        "P8.16",	// Fuel_Blocking Valve#
+        "P8.17",	// Relay_Low_Side_Drive#
+        "P8.18",	// CS_TB_EXTRA_ADC#
+        "P8.26",	// CS_TB_POWER_ADC#
+        "P8.31",	// CS_TB_DAC#
+        "P8.32",	// CS_MG_RELAYDRIVER#
+        "P8.33",	// CS_MG_PORTVOLTAGE_ADC#
+        "P8.34",	// CS_MG_PORTCURRENT_ADC#
+        "P8.35",	// CS_TC_1#
+        "P8.36",	// CS_TC_2#
+        "P8.37",	// CS_TC_3#
+        "P8.38",	// CS_TB_FUEL_CELL_ADC#
+        "P8.43",	// 
+        "P8.44",	// CS_DAC2 - for min battery voltage setting
+        "P8.45",	// CS_ONEWIRE_LATCH
+        "P8.46",	// CS_MGPORT_EXPANDER
+        "P9.12",	// Switch_LED#
+        "P9.15",	// CO_SENSOR_PS_ON
+        "P9.17",	// CS_RTC
+        "P9.23",	// Enable_PS#
+        "P9.24",	// Enable_PS2#
+     // "P9.25",	// ** SPI2_MOSI
+        "P9.26",	// CS OLED
+     // "P9.27",	// ** SPI2_SCK
+     // "P9.28",	// ** SPI_MISO
+        "P9.41";	// 1.4V_Enable#
+
+    fragment@0 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+
+            gpio_usermap_pins: pinmux_gpio_usermap_pins {
+                pinctrl-single,pins = <
+
+                  0x090 0x37  // P8.7  Timer4, INPUT | MODE7 
+                  0x094 0x37  // P8.8  Timer7, INPUT | MODE7 
+                  0x09C 0x37  // P8.9  Timer5, INPUT | MODE7 
+                  0x098 0x37  // P8.10 Timer6, INPUT | MODE7 
+                  0x034 0x37  // P8.11 GPIO1_13, INPUT | MODE7 
+				  0x030 0x27  // P8.12 GPIO1_12, INPUT | MODE7 
+				  
+				  0x028 0x07  // P8.14 GPIO0_26, OUTPUT | MODE7 
+				  0x03C 0x07  // P8.15 GPIO1_15, OUTPUT | MODE7 
+				  0x038 0x07  // P8.16 GPIO1_14, OUTPUT | MODE7 
+				  0x02C 0x07  // P8.17 GPIO0_27, OUTPUT | MODE7 
+				  0x08C 0x07  // P8.18 GPIO2_1, OUTPUT | MODE7 
+				  0x07C 0x07  // P8.26 GPIO1_28, OUTPUT | MODE7 
+				  0x0D8 0x07  // P8.31 UART5_CTSN, OUTPUT | MODE7 
+				  0x0DC 0x07  // P8.32 UART5_RTSN, OUTPUT | MODE7 
+				  0x0D4 0x07  // P8.33 UART4_RTSN, OUTPUT | MODE7 
+				  0x0CC 0x07  // P8.34 UART3_RTSN, OUTPUT | MODE7 
+				  0x0D0 0x07  // P8.35 UART4_CTSN, OUTPUT | MODE7 
+				  0x0C8 0x07  // P8.36 UART3_CTSN, OUTPUT | MODE7 
+				  0x0C0 0x07  // P8.37 UART5_TXD, OUTPUT | MODE7 
+				  0x0C4 0x07  // P8.38 UART5_RXD, OUTPUT | MODE7 
+				  0x0A8 0x07  // P8.43 GPIO2_8, OUTPUT | MODE7 
+				  0x0AC 0x07  // P8.44 GPIO2_9, OUTPUT | MODE7 
+				  0x0A0 0x07  // P8.45 GPIO2_6, OUTPUT | MODE7 
+				  0x0A4 0x07  // P8.46 GPIO2_7, OUTPUT | MODE7 
+
+				  0x078 0x07  // P9.12 GPIO1_28, OUTPUT | MODE7 
+				  0x040 0x07  // P9.15 GPIO1_16, OUTPUT | MODE7 
+				  0x15C 0x07  // P9.17 GPIO1_16, OUTPUT | MODE7 
+				  0x044 0x07  // P9.23 GPIO1_17, OUTPUT | MODE7 
+				  0x184 0x07  // P9.24 UART1_TXD, OUTPUT | MODE7 
+			//    0x1AC 0x07  // P9.25 GPIO3_21, OUTPUT | MODE7 
+				  0x180 0x07  // P9.26 UART1_RXD, OUTPUT | MODE7 
+			//	  0x1A4 0x07  // P9.27 GPIO3_19, OUTPUT | MODE7 
+			//	  0x19C 0x07  // P9.28 SPI1_CS0, OUTPUT | MODE7 
+				  0x1B4 0x07  // P9.41 CLKOUT2, OUTPUT | MODE7 
+                >;
+            };
+        };
+    };
+
+    fragment@1 {
+        target = <&ocp>;
+        __overlay__ {            
+            #address-cells = <1>;
+            #size-cells = <1>;                            
+
+            gpio_keys {
+                compatible = "gpio-keys";
+                pinctrl-names = "default";
+                pinctrl-0 = <&gpio_usermap_pins>;
+                #address-cells = <1>;
+                #size-cells = <0>;
+
+				// this is polled in main TB process
+                switch_power_button {
+                    label = "Power Button";
+                    debounce_interval = <200>;
+                    linux,code = <1>;
+                    gpios = <&gpio3 2 0x5>; // bit two is direction and bit one is pullup, so 0×4 + 0×1 = 0×5 is input, pullup
+                    gpio-key,wakeup;
+                };           
+                switch_esc_button {
+                    label = "Escape Button";
+                    debounce_interval = <50>;
+                    linux,code = <2>;
+                    gpios = <&gpio3 3 0x5>; // bit two is direction and bit one is pullup, so 0×4 + 0×1 = 0×5 is input, pullup
+                    gpio-key,wakeup;
+                };                
+                switch_up_button {
+                    label = "Up Button";
+                    debounce_interval = <50>;
+                    linux,code = <3>;
+                    gpios = <&gpio3 5 0x5>; // bit two is direction and bit one is pullup, so 0×4 + 0×1 = 0×5 is input, pullup
+                    gpio-key,wakeup;
+                };                
+                switch_down_button {
+                    label = "Down Button";
+                    debounce_interval = <50>;
+                    linux,code = <4>;
+                    gpios = <&gpio3 4 0x5>; // bit two is direction and bit one is pullup, so 0×4 + 0×1 = 0×5 is input, pullup
+                    gpio-key,wakeup;
+                };                
+                switch_enter_button {
+                    label = "Enter Button";
+                    debounce_interval = <50>;
+                    linux,code = <5>;
+                    gpios = <&gpio2 13 0x5>; // bit two is direction and bit one is pullup, so 0×4 + 0×1 = 0×5 is input, pullup
+                    gpio-key,wakeup;
+                };                
+            };
+
+			test_helper: helper {
+				compatible = "bone-pinmux-helper";
+				pinctrl-names = "default";
+				pinctrl-0 = <&gpio_usermap_pins>;
+				status = "okay";
+			};
+        };
+	};
+};

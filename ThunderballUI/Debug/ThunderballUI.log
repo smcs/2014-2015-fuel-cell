@@ -1,0 +1,37 @@
+﻿Build started 5/12/2015 5:08:21 PM.
+     1>Project "Z:\src\Linux\Applications\ThunderballUI\ThunderballUI.vcxproj" on node 2 (Rebuild target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt ..\..\..\SpecComps\Thunderball\ThunderballSystemStats.cpp ..\..\DeviceComps\OLEDDriver.cpp ..\..\NetComps\NodeJsInterface.cpp ..\..\NetComps\PtxMsgHandler.cpp ..\..\NetComps\RemoteOLEDInterface.cpp ..\..\NetComps\TcpDataInterface.cpp ..\..\NetComps\TcpDebugInterface.cpp ..\..\NetComps\TcpMsgClientData.cpp ..\..\NetComps\TcpPtxMsgInterface.cpp ..\..\PlatformComps\ArgParser.cpp ..\..\PlatformComps\GPIOConst.cpp ..\..\PlatformComps\GPIOManager.cpp ..\..\PlatformComps\LinuxDataInterface.cpp ..\..\PlatformComps\LinuxDebug.cpp ..\..\PlatformComps\LinuxProcess.cpp ..\..\PlatformComps\RollingLogFiles.cpp ..\..\PlatformComps\TextFile.cpp ..\..\PlatformComps\UiPage.cpp ..\..\PlatformComps\UiPageMgr.cpp ..\..\PRUComps\PruSpiInterface.cpp ThunderballDataInterface.cpp ThunderballDbInterface.cpp ThunderballUI.cpp ThunderballUiPages.cpp
+         ThunderballUiPages.cpp
+     1>z:\src\linux\applications\thunderballui\thunderballuipages.cpp(10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         ThunderballUI.cpp
+     1>z:\src\linux\applications\thunderballui\thunderballui.cpp(9): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         ThunderballDbInterface.cpp
+     1>z:\src\linux\applications\thunderballui\thunderballdbinterface.cpp(11): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         ThunderballDataInterface.cpp
+     1>z:\src\linux\applications\thunderballui\thunderballdatainterface.cpp(9): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         PruSpiInterface.cpp
+     1>z:\src\linux\prucomps\pruspiinterface.cpp(10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         UiPageMgr.cpp
+     1>z:\src\linux\platformcomps\uipagemgr.h(6): fatal error C1083: Cannot open include file: 'Types.h': No such file or directory
+         UiPage.cpp
+     1>z:\src\linux\platformcomps\uipage.cpp(8): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         TextFile.cpp
+         RollingLogFiles.cpp
+     1>z:\src\linux\platformcomps\rollinglogfiles.cpp(11): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         LinuxProcess.cpp
+     1>z:\src\linux\platformcomps\linuxprocess.cpp(10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         LinuxDebug.cpp
+     1>z:\src\linux\platformcomps\linuxdebug.cpp(18): fatal error C1083: Cannot open include file: 'syslog.h': No such file or directory
+         LinuxDataInterface.cpp
+     1>z:\src\linux\platformcomps\linuxdatainterface.cpp(10): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         GPIOManager.cpp
+     1>z:\src\linux\platformcomps\gpiomanager.cpp(26): fatal error C1083: Cannot open include file: 'unistd.h': No such file or directory
+         GPIOConst.cpp
+         ArgParser.cpp
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V110\Microsoft.CppCommon.targets(347,5): warning MSB4220: Waiting for the currently executing task "CL" to cancel.
+     1>Done Building Project "Z:\src\Linux\Applications\ThunderballUI\ThunderballUI.vcxproj" (Rebuild target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:22.39

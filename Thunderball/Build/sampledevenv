@@ -1,0 +1,8 @@
+# Permanent device config file for system
+#
+# PTX_UNITID - obviously the unit id of the system
+
+PTX_SERIALNUMBER=ReplaceSN
+export PTX_SERIALNUMBER
+PTX_HOTZONE_ID="ReplaceHotZoneId"
+export PTX_HOTZONE_ID

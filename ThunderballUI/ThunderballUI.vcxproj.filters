@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="WebApplication">
+      <UniqueIdentifier>{d23e94b6-3b8c-4d10-a687-9eed7376c23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\public">
+      <UniqueIdentifier>{3c758a41-8d13-44a1-868b-7d1ed02c2e66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\views">
+      <UniqueIdentifier>{8e892314-d954-405f-8364-e65a8b1aeda5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\routes">
+      <UniqueIdentifier>{89c32bdb-7e9c-49d6-8931-fed1ad471630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\public\images">
+      <UniqueIdentifier>{9b054ad0-d783-4a38-94d1-b8f90d9ec2c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\public\javascripts">
+      <UniqueIdentifier>{b9f7a98a-7ff8-493a-8b47-97f4dc000d5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\public\stylesheets">
+      <UniqueIdentifier>{57aa9e8d-0b8c-4a13-ad11-6fb9872a8bd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="WebApplication\libs">
+      <UniqueIdentifier>{061aaf73-05b1-45fa-8c0c-0e5ef3e9217c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode">
+      <UniqueIdentifier>{606be0f3-362a-4146-948c-1df4fb1df4d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\ControlComps">
+      <UniqueIdentifier>{aba3dc92-169e-45ee-a803-45e12afe84b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\GenComps">
+      <UniqueIdentifier>{4a63d009-4c76-473b-815b-68bbe21721ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\SpecComps">
+      <UniqueIdentifier>{521e36d0-7e6f-412b-9782-b611dc1d70d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\SpecComps\Thunderball">
+      <UniqueIdentifier>{b0fa117c-95ac-4f81-9b04-d1da933328fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\SysComps">
+      <UniqueIdentifier>{d999d241-56ee-480d-a63f-1c563ffd4db3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ThunderballData">
+      <UniqueIdentifier>{1368c28d-f7bf-487e-ad92-e242de2c786d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux">
+      <UniqueIdentifier>{ab4f6943-62cf-478c-9f50-cd43afb29dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\Applications">
+      <UniqueIdentifier>{64cc906a-da9f-4550-b7ab-411a15313217}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\Applications\ThunderballUI">
+      <UniqueIdentifier>{3c9948f5-b8e8-49dd-a36d-644a6b219b8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\NetComps">
+      <UniqueIdentifier>{431abff6-c17a-40bb-809b-691e7b85e987}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\PlatformComps">
+      <UniqueIdentifier>{a88ad52f-223e-4239-98da-45b8df18cabe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\PRUComps">
+      <UniqueIdentifier>{4f04984b-53a9-47bf-9743-e6fe8b79544e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FuelCellCode\Linux\DeviceComps">
+      <UniqueIdentifier>{25b02436-cfee-4e01-bfa9-fd307eb7ed2a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\NetComps\PtxMsgHandler.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpDataInterface.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpDebugInterface.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpPtxMsgInterface.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\ArgParser.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\GPIOConst.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\GPIOManager.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxDataInterface.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxDebug.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\LinuxProcess.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\TextFile.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PRUComps\PruSpiInterface.cpp">
+      <Filter>FuelCellCode\Linux\PRUComps</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballUiPages.cpp">
+      <Filter>FuelCellCode\Linux\Applications\ThunderballUI</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballUI.cpp">
+      <Filter>FuelCellCode\Linux\Applications\ThunderballUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\DeviceComps\OLEDDriver.cpp">
+      <Filter>FuelCellCode\Linux\DeviceComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\UiPage.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\UiPageMgr.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.cpp">
+      <Filter>FuelCellCode\SpecComps\Thunderball</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\NodeJsInterface.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\PlatformComps\RollingLogFiles.cpp">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\RemoteOLEDInterface.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\NetComps\TcpMsgClientData.cpp">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballDataInterface.cpp">
+      <Filter>ThunderballData</Filter>
+    </ClCompile>
+    <ClCompile Include="ThunderballDbInterface.cpp">
+      <Filter>ThunderballData</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\NetComps\PtxMsgHandler.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpDataInterface.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpDebugInterface.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpPtxMsgInterface.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\ArgParser.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\GPIOConst.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\GPIOManager.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxDataInterface.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxDebug.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\LinuxProcess.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\TextFile.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PRUComps\PruSpiInterface.h">
+      <Filter>FuelCellCode\Linux\PRUComps</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballUiPages.h">
+      <Filter>FuelCellCode\Linux\Applications\ThunderballUI</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballUI.h">
+      <Filter>FuelCellCode\Linux\Applications\ThunderballUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\DeviceComps\OLEDDriver.h">
+      <Filter>FuelCellCode\Linux\DeviceComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\UiPage.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\UiPageMgr.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.h">
+      <Filter>FuelCellCode\SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\NodeJsInterface.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\GenComps\Types.h">
+      <Filter>FuelCellCode\GenComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSofcMgr.h">
+      <Filter>FuelCellCode\SpecComps\Thunderball</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControlComps\HwDriveMode.h">
+      <Filter>FuelCellCode\ControlComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\SysComps\BaseObject.h">
+      <Filter>FuelCellCode\SysComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\PlatformComps\RollingLogFiles.h">
+      <Filter>FuelCellCode\Linux\PlatformComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\RemoteOLEDInterface.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\NetComps\TcpMsgClientData.h">
+      <Filter>FuelCellCode\Linux\NetComps</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballDataInterface.h">
+      <Filter>ThunderballData</Filter>
+    </ClInclude>
+    <ClInclude Include="ThunderballDbInterface.h">
+      <Filter>ThunderballData</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\PRUComps\SpiPruMain.hp">
+      <Filter>FuelCellCode\Linux\PRUComps</Filter>
+    </None>
+    <None Include="..\..\PRUComps\SpiPruMain.p">
+      <Filter>FuelCellCode\Linux\PRUComps</Filter>
+    </None>
+    <None Include="WebApplication\app.js">
+      <Filter>WebApplication</Filter>
+    </None>
+    <None Include="WebApplication\views\index.jade">
+      <Filter>WebApplication\views</Filter>
+    </None>
+    <None Include="WebApplication\public\stylesheets\style.css">
+      <Filter>WebApplication\public\stylesheets</Filter>
+    </None>
+    <None Include="WebApplication\views\eventlog.jade">
+      <Filter>WebApplication\views</Filter>
+    </None>
+    <None Include="WebApplication\public\javascripts\eventlog.js">
+      <Filter>WebApplication\public\javascripts</Filter>
+    </None>
+    <None Include="WebApplication\views\layout.jade">
+      <Filter>WebApplication\views</Filter>
+    </None>
+    <None Include="WebApplication\public\javascripts\statsview.js">
+      <Filter>WebApplication\public\javascripts</Filter>
+    </None>
+    <None Include="WebApplication\views\statsview.jade">
+      <Filter>WebApplication\views</Filter>
+    </None>
+    <None Include="WebApplication\public\javascripts\index.js">
+      <Filter>WebApplication\public\javascripts</Filter>
+    </None>
+    <None Include="WebApplication\libs\appconnect.js">
+      <Filter>WebApplication\libs</Filter>
+    </None>
+    <None Include="WebApplication\public\javascripts\jquery.min.js">
+      <Filter>WebApplication\public\javascripts</Filter>
+    </None>
+    <None Include="WebApplication\public\javascripts\highcharts.js">
+      <Filter>WebApplication\public\javascripts</Filter>
+    </None>
+    <None Include="WebApplication\routes\routes.js">
+      <Filter>WebApplication\routes</Filter>
+    </None>
+    <None Include="WebApplication\libs\dbaccess.js">
+      <Filter>WebApplication\libs</Filter>
+    </None>
+    <None Include="Makefile.BBB">
+      <Filter>FuelCellCode</Filter>
+    </None>
+  </ItemGroup>
+</Project>

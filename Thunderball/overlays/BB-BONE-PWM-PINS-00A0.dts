@@ -1,0 +1,163 @@
+/*
+* PRU dts file BB-BONE-PRU-PINS-00A1.dts
+*/
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    /* identification */
+    part-number = "BB-BONE-PWM-PINS";
+    version = "00A0";
+
+    exclusive-use =
+	  "P8.13",  // PWM - ehrpwm2B
+	  "P8.19",  // PWM - ehrpwm2A
+	  "P9.31",  // PWM - ehrpwm0A
+	  "P9.16",  // PWM - ehrpwm1B
+	  "P9.14",  // PWM - ehrpwm1A
+	  "ehrpwm2B",
+	  "ehrpwm2A",
+	  "ehrpwm0A",
+	  "ehrpwm1B",
+	  "ehrpwm1A";
+
+    fragment@0 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+			pbair_pwm_pins: pinmux_pbair_pwm_pins {
+				pinctrl-single,pins = < 0x024 0x04 /* P8_13,  MODE 4 */ >;
+				//linux,phandle = <0x1>;
+				//phandle = <0x1>;
+			};		        
+			cathair_pwm_pins: pinmux_cathair_pwm_pins {
+				pinctrl-single,pins = < 0x020 0x04 /* P8_19,  MODE 4 */ >;
+				//linux,phandle = <0x1>;
+				//phandle = <0x1>;
+			};		        
+			anodeair_pwm_pins: pinmux_anodeair_pwm_pins {
+				pinctrl-single,pins = < 0x190 0x01 /* P9_31,  MODE 1 */ >;
+				//linux,phandle = <0x1>;
+				//phandle = <0x1>;
+			};		        
+			pbfuel_pwm_pins: pinmux_pbfuel_pwm_pins {
+				pinctrl-single,pins = < 0x04c 0x06 /* P9_16,  MODE 6 */ >;
+				//linux,phandle = <0x1>;
+				//phandle = <0x1>;
+			};		        
+			anodefuel_pwm_pins: pinmux_anodefuel_pwm_pins {
+				pinctrl-single,pins = < 0x048 0x06 /* P9_14,  MODE 6 */ >;
+				//linux,phandle = <0x1>;
+				//phandle = <0x1>;
+			};		        
+		};
+    };
+
+	fragment@1 {
+		target = <&epwmss2>;
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@2 {
+		target = <&ehrpwm2>;
+		__overlay__ {			
+			status = "okay";			
+		};
+	};
+	
+	fragment@3 {
+		target = <&epwmss0>;
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@4 {
+		target = <&ehrpwm0>;
+		__overlay__ {			
+			status = "okay";			
+		};
+	};
+
+	fragment@5 {
+		target = <&epwmss1>;
+		__overlay__ {
+			status = "okay";
+		};
+	};
+
+	fragment@6 {
+		target = <&ehrpwm1>;
+		__overlay__ {			
+			status = "okay";			
+		};
+	};
+
+	fragment@7 {
+		target = <&ocp>;
+		__overlay__ {			
+			#address-cells = <0x1>;
+			#size-cells = <0x1>;
+
+			Cathode_Blower_Drive {
+				compatible      = "pwm_test";
+				pinctrl-names   = "default";
+				pinctrl-0       = <&pbair_pwm_pins>;
+				pwms 			= <&ehrpwm2 1 40000 1>;		// Pin B, period ns, normally high
+				pwm-names 		= "PWM_P8_13_PBAIR";
+				enabled			= <1>;
+				duty			= <0>;
+				status 			= "okay";
+			};
+
+			PB_Blower_Drive {
+				compatible      = "pwm_test";
+				pinctrl-names   = "default";
+				pinctrl-0       = <&cathair_pwm_pins>;
+				pwms 			= <&ehrpwm2 0 40000 1>;		// Pin A, period ns, normally high
+				pwm-names 		= "PWM_P8_19_CATHAIR";
+				enabled			= <1>;
+				duty			= <0>;
+				status 			= "okay";
+			};
+
+			Anode_Pump_Drive {
+				compatible      = "pwm_test";
+				pinctrl-names   = "default";
+				pinctrl-0       = <&anodeair_pwm_pins>;
+				pwms 			= <&ehrpwm0 0 50000 0>;		// Pin A, period ns, normally low
+				pwm-names 		= "PWM_P9_31_ANODEAIR";
+				enabled			= <1>;
+				duty			= <0>;
+				status 			= "okay";
+			};
+
+			PB_Fuel_Drive {
+				compatible      = "pwm_test";
+				pinctrl-names   = "default";
+				pinctrl-0       = <&pbfuel_pwm_pins>;
+				pwms 			= <&ehrpwm1 1 111111 0>;		// Pin B, period ns, normally low
+				pwm-names 		= "PWM_P9_16_PBFUEL";
+				enabled			= <1>;
+				duty			= <0>;
+				status 			= "okay";
+			};
+
+			Anode_Fuel_Drive {
+				compatible      = "pwm_test";
+				pinctrl-names   = "default";
+				pinctrl-0       = <&anodefuel_pwm_pins>;
+				pwms 			= <&ehrpwm1 0 111111 0>;		// Pin A, period ns, normally low
+				pwm-names 		= "PWM_P9_14_ANODEFUEL";
+				enabled			= <1>;
+				duty			= <0>;
+				status 			= "okay";
+			};
+
+		};
+	};
+};

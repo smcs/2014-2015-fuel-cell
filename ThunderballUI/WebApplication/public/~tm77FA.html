@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="Description" content="Basic Gray">
+    <meta name="author" content="CoffeeCup Software, Inc.">
+    <meta name="Copyright" content="Copyright (c) 2010 CoffeeCup, all rights reserved.">
+	<title>Event Log</title>
+    <link rel="stylesheet" href="stylesheets/default.css">
+    <script type="text/javascript" src="javascripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="javascripts/behavior.js"></script>
+    <script type="text/javascript" src="javascripts/eventlog.js"></script>
+
+	<!--[if IE]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+<body ccID="771">
+	<header ccID="780" id="mast">
+    	<h1 ccID="805">
+        <a ccID="819" href="http://www.protonex.com"><img ccID="853" src="images/Protonex_vector-blk_bkgd-copy (1).png" width="537" height="105" alt="" border="0" ></a>
+		</h1>
+    </header>
+    <nav ccID="987" id="global">
+    	<ul ccID="1011">
+        	<li ccID="1026"><a ccID="1030" class="selected" href="index.html">Home</a></li>
+            <li ccID="1095"><a ccID="1099" href="statistics.html">Statistics</a></li>
+            <li ccID="1158"><a ccID="1162" href="eventlog.html">Event Log</a></li>
+            <li ccID="1218"><a ccID="1222" href="stressrelief.html">Stress Relief</a></li>
+        </ul>
+    </nav>
+   <!--  <section id="intro">
+    	<header>
+    		<h2>Do you love HTML 5 as much as we do?</h2>
+        </header>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+        <a href="/">Read More!</a>
+        <div id="photo">
+        	<div>
+            	<h3>Photo</h3>
+            </div>
+        </div>  -->
+    </section>
+	<p ccID="1801"></p>
+	<p ccID="1811"></p>
+	<p ccID="1821"></p>
+	<p ccID="1831"></p>
+	<input ccID="1841" id="msgfield" name="msg2" type="text" value="">
+	<input ccID="1898" id="logbut" value="Add To Log" type="button" onClick="processLog(msgfield.value)">
+	<p ccID="1990"></p>
+	<input ccID="2000" id="deletelog" value="Delete Log" type="button" onClick="deleteLog()">
+	<p ccID="2080">Refresh page after deleting</p>
+	<p ccID="2117"></p>
+	<div ccID="2127" id="container">
+    </div>
+	<p ccID="2162"></p>
+	<p ccID="2172"></p>
+    <footer ccID="2185">
+    	<div ccID="2200" class="clear">
+            <section ccID="2233" id="about">
+                <header ccID="2271">
+                    <h3 ccID="2301">About the Programmer</h3>
+                </header>
+                <p ccID="2375"> Matthew Flathers graduated (assuming he passed this project) from St. Mark's School with the class of 2015 and will be attending Brown University next fall (again assuming he passes this project). This Website was created as a final project for his Advanced Topics in Computer Science class.
+            </section>
+            <!--<section>
+                <header>
+                    <h3>Blog Roll</h3>
+                </header>
+                <nav id="blogRoll">
+                    <ul>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                        <li><a href="/">Page Link</a></li>
+                    </ul>
+                </nav>
+            </section> -->
+            <section ccID="3330">
+                <header ccID="3357">
+                    <h3 ccID="3387">Site Map</h3>
+                </header>
+                <nav ccID="3449" id="siteMap">
+                    <ul ccID="3489">
+                        <li ccID="3519"><a ccID="3523" href="index.html">Home</a></li>
+                        <li ccID="3583"><a ccID="3587" href="eventlog.html">Event Log</a></li>
+                        <li ccID="3655"><a ccID="3659" href="statistics.html">Statistics</a></li>
+                        <li ccID="3730"><a ccID="3734" href="stressrelief.html">Stress Relief</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

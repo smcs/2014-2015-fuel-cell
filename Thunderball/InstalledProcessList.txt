@@ -1,0 +1,4 @@
+# Basic Launch file
+
+/opt/protonex/package/bin/Thunderball
+/opt/protonex/package/bin/ThunderballUI --pru-app /opt/protonex/package/bin/SpiPruMain.bin --id 2

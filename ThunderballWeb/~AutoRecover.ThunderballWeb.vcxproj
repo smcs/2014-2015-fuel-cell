@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B88A77F7-F886-409D-8F1D-BA0EB9A3F7C6}</ProjectGuid>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeOutput>ThunderballWeb.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeOutput>ThunderballWeb.exe</NMakeOutput>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\PRUComps\SpiPruMain.hp">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\..\PRUComps\SpiPruMain.p">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\ThunderballUI\Makefile.BBB">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\ThunderballUI\WebApplication\app.js" />
+    <None Include="..\ThunderballUI\WebApplication\libs\appconnect.js" />
+    <None Include="..\ThunderballUI\WebApplication\libs\dbaccess.js" />
+    <None Include="..\ThunderballUI\WebApplication\logchange.signal" />
+    <None Include="..\ThunderballUI\WebApplication\public\index.html" />
+    <None Include="..\ThunderballUI\WebApplication\public\javascripts\eventlog.js" />
+    <None Include="..\ThunderballUI\WebApplication\public\javascripts\highcharts.js" />
+    <None Include="..\ThunderballUI\WebApplication\public\javascripts\jquery.min.js" />
+    <None Include="..\ThunderballUI\WebApplication\public\javascripts\statsview.js" />
+    <None Include="..\ThunderballUI\WebApplication\public\javascripts\summary.js" />
+    <None Include="..\ThunderballUI\WebApplication\public\stylesheets\style.css" />
+    <None Include="..\ThunderballUI\WebApplication\routes\routes.js" />
+    <None Include="..\ThunderballUI\WebApplication\views\eventlog.jade">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\ThunderballUI\WebApplication\views\jadeindex.jade" />
+    <None Include="..\ThunderballUI\WebApplication\views\layout.jade">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\ThunderballUI\WebApplication\views\statsview.jade">
+      <FileType>Document</FileType>
+    </None>
+    <None Include="..\ThunderballUI\WebApplication\views\summary.jade" />
+    <None Include="VaisalaDataFeed.csv" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\ControlComps\HwDriveMode.h" />
+    <ClInclude Include="..\..\..\GenComps\Types.h" />
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSofcMgr.h" />
+    <ClInclude Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.h" />
+    <ClInclude Include="..\..\..\SysComps\BaseObject.h" />
+    <ClInclude Include="..\..\DeviceComps\OLEDDriver.h" />
+    <ClInclude Include="..\..\NetComps\NodeJsInterface.h" />
+    <ClInclude Include="..\..\NetComps\PtxMsgHandler.h" />
+    <ClInclude Include="..\..\NetComps\RemoteOLEDInterface.h" />
+    <ClInclude Include="..\..\NetComps\TcpDataInterface.h" />
+    <ClInclude Include="..\..\NetComps\TcpDebugInterface.h" />
+    <ClInclude Include="..\..\NetComps\TcpMsgClientData.h" />
+    <ClInclude Include="..\..\NetComps\TcpPtxMsgInterface.h" />
+    <ClInclude Include="..\..\PlatformComps\ArgParser.h" />
+    <ClInclude Include="..\..\PlatformComps\GPIOConst.h" />
+    <ClInclude Include="..\..\PlatformComps\GPIOManager.h" />
+    <ClInclude Include="..\..\PlatformComps\LinuxDataInterface.h" />
+    <ClInclude Include="..\..\PlatformComps\LinuxDebug.h" />
+    <ClInclude Include="..\..\PlatformComps\LinuxProcess.h" />
+    <ClInclude Include="..\..\PlatformComps\RollingLogFiles.h" />
+    <ClInclude Include="..\..\PlatformComps\TextFile.h" />
+    <ClInclude Include="..\..\PlatformComps\UiPage.h" />
+    <ClInclude Include="..\..\PlatformComps\UiPageMgr.h" />
+    <ClInclude Include="..\..\PRUComps\PruSpiInterface.h" />
+    <ClInclude Include="..\ThunderballUI\ThunderballDataInterface.h" />
+    <ClInclude Include="..\ThunderballUI\ThunderballDbInterface.h" />
+    <ClInclude Include="..\ThunderballUI\ThunderballUI.h" />
+    <ClInclude Include="..\ThunderballUI\ThunderballUiPages.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\SpecComps\Thunderball\ThunderballSystemStats.cpp" />
+    <ClCompile Include="..\..\DeviceComps\OLEDDriver.cpp" />
+    <ClCompile Include="..\..\NetComps\NodeJsInterface.cpp" />
+    <ClCompile Include="..\..\NetComps\PtxMsgHandler.cpp" />
+    <ClCompile Include="..\..\NetComps\RemoteOLEDInterface.cpp" />
+    <ClCompile Include="..\..\NetComps\TcpDataInterface.cpp" />
+    <ClCompile Include="..\..\NetComps\TcpDebugInterface.cpp" />
+    <ClCompile Include="..\..\NetComps\TcpMsgClientData.cpp" />
+    <ClCompile Include="..\..\NetComps\TcpPtxMsgInterface.cpp" />
+    <ClCompile Include="..\..\PlatformComps\ArgParser.cpp" />
+    <ClCompile Include="..\..\PlatformComps\GPIOConst.cpp" />
+    <ClCompile Include="..\..\PlatformComps\GPIOManager.cpp" />
+    <ClCompile Include="..\..\PlatformComps\LinuxDataInterface.cpp" />
+    <ClCompile Include="..\..\PlatformComps\LinuxDebug.cpp" />
+    <ClCompile Include="..\..\PlatformComps\LinuxProcess.cpp" />
+    <ClCompile Include="..\..\PlatformComps\RollingLogFiles.cpp" />
+    <ClCompile Include="..\..\PlatformComps\TextFile.cpp" />
+    <ClCompile Include="..\..\PlatformComps\UiPage.cpp" />
+    <ClCompile Include="..\..\PlatformComps\UiPageMgr.cpp" />
+    <ClCompile Include="..\..\PRUComps\PruSpiInterface.cpp" />
+    <ClCompile Include="..\ThunderballUI\ThunderballDataInterface.cpp" />
+    <ClCompile Include="..\ThunderballUI\ThunderballDbInterface.cpp" />
+    <ClCompile Include="..\ThunderballUI\ThunderballUI.cpp" />
+    <ClCompile Include="..\ThunderballUI\ThunderballUiPages.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\ThunderballUI\WebApplication\public\images\Kitty.jpeg" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,65 @@
+/*
+* PRU dts file BB-BONE-PRU-PINS-00A1.dts
+*/
+
+/dts-v1/;
+/plugin/;
+
+/ {
+    compatible = "ti,beaglebone", "ti,beaglebone-black";
+
+    /* identification */
+    part-number = "BB-BONE-PRU-PINS";
+    version = "00A0";
+
+    exclusive-use =
+	  "P8.27",  // Port 4
+	  "P8.28",  // Port 6
+      "P8.29",  // Port 5
+      "P8.30",  // Internal Battery
+      "P8.39",  // Port 2
+      "P8.40",  // Port 3
+      "P8.41",	// Port 1
+      "P8.42",  // OE 
+	  "P9.25",  // SPI2.MOSI
+	  "P9.27",  // SPI2.SCK
+	  "P9.28",  // SPI2.MISO
+      "pruss";
+
+    fragment@0 {
+        target = <&am33xx_pinmux>;
+        __overlay__ {
+            onewirepins: pinmux_onewirepins {
+                pinctrl-single,pins = <
+				  0x0E0 0x26  /* P8.27 PRU1_r31_8 mode 6 */
+				  0x0E8 0x26  /* P8.28 PRU1_r31_10 mode 6 */
+				  0x0E4 0x26  /* P8.29 PRU1_r31_9 mode 6 */
+				  0x0EC 0x26  /* P8.30 PRU1_r31_11 mode 6 */
+				  0x0B8 0x26  /* P8.39 PRU1_r31_7 mode 6 */
+				  0x0BC 0x26  /* P8.40 PRU1_r31_6 mode 6 */ 
+				  0x0B0 0x26  /* P8.41 PRU1_r31_4 mode 6 */
+				  0x0B4 0x07  /* P8.42 Gpio2_11 mode 7 */
+
+				  0x1AC 0x05  /* P9.25 PRU0_r30_7 mode 5 */
+				  0x1A4 0x05  /* P9.27 PRU0_r30_5 mode 5 */
+				  0x19C 0x26  /* P9.28 PRU0_r31_3 mode 5 */
+
+                >;
+            };
+		};
+    };
+
+    fragment@1{
+      target = <&pruss>;
+        __overlay__ {
+           status = "okay";
+           pinctrl-names="default";
+           pinctrl-0 = <&onewirepins>;
+
+	      port2_Tx{
+	         pin-names = "PRU-One-Wire:Tx";
+             gpios = <&gpio3 11 0x0>;
+          };
+        };
+    };
+};

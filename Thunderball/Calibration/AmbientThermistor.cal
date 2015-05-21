@@ -1,0 +1,22 @@
+# Internal Ambinet Thermistor calibration file
+# Date made: 11-23-14
+# Non calibrated data - copied from hard coded source code table
+# Ref Value - must use spaces in between values
+3930 -400
+3804 -300
+3615 -200
+3355 -100
+3025 0
+2646 100
+2246 200
+1857 300
+1505 400
+1203 500
+954	600
+755	700
+598	800
+475	900
+380	1000
+306	1100
+248	1200
+203	1300
